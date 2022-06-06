@@ -186,9 +186,9 @@ def graphql_queries(conn):
   ## this is just a workaround! 
   combined_df = combined_df.sort_index(axis=1)
   try:
-    combined_df.drop(columns=['database_port','upstr_db_id','upstr_table_id','upstr_ds_id','upstr_ds_name', 'upstr_ds_project'], inplace = True)
+    combined_df.drop(columns=['owner.id', 'database_port','upstr_db_id','table.table_name','table.upstr_table_id'], inplace = True)
   except KeyError:
-    combined_df.drop(columns=['database_port','upstr_db_id','upstr_table_id'], inplace = True)
+    combined_df.drop(columns=['owner.id', 'database_port','upstr_db_id','table.table_name','table.upstr_table_id'], inplace = True)
   finally:
     print(combined_df.columns)
   return combined_df
