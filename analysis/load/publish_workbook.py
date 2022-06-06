@@ -17,9 +17,9 @@ def publish_workbook(conn, project_id):
     # connection_username, connection_password and server_address is related to the datasource of the workbook.
     # since the original workbook is from tableau.bi-concepts.ch, we need to pass this url as server address
     publish_response = conn.publish_workbook(
-    workbook_file_path='workbook/ImpactAnalysis.twb', workbook_name='ImpactAnalysisApp', show_tabs_flag='false',
-    project_id=projectId, port_number='443' ,connection_username='', connection_password='', server_address='tableau.bi-concepts.ch')
-    #, parameter_dict= {'workbook-file-type' : 'twb','overwrite': 'overwrite=true', 'skip-connection-check-flag' : 'skip-connection-check-flag=true'})
+    workbook_file_path='workbook/Impact_Analysis.twb', workbook_name='Impact_Analysis', show_tabs_flag='false',
+    project_id=projectId, port_number='443' ,connection_username='', connection_password='', server_address='tableau.bi-concepts.ch'
+    , parameter_dict= {'workbook-file-type' : 'twb','overwrite': 'overwrite=true', 'skip-connection-check-flag' : 'skip-connection-check-flag=true'})
 
     print(publish_response.json())
     # extract the workbook url from the api response to provide a direkt link to the dashboard
