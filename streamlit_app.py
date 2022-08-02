@@ -41,7 +41,7 @@ st.text('This app is powered by BI Concepts GmbH')
 # define user names and passwords for login
 names = ['Benjamin','Selma','Dev']
 usernames = ['Benny','Selma','Dev']
-passwords = ['Bicli0987.','hello123','test000!']
+passwords = ['Bicli0987.','hello123','test00B!']
 hashed_passwords = stauth.Hasher(passwords).generate()
 
 authenticator = stauth.Authenticate(names,usernames,hashed_passwords,
