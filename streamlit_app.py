@@ -120,7 +120,7 @@ if "load_state" not in st.session_state:
      st.session_state.load_state = False
     
 if authentication_status:
-        st.write('Welcome', name, '! First, lets make some data flowing. Enter you Tableau Server information')
+        st.write('Welcome', name, '! Set up your Tableau server connection')
         url_input = st.text_input('URL (https://<YOUR_SERVER_NAME>.com)')
         user_input =st.text_input('User')
         password_input = st.text_input('Password', type = 'password')
