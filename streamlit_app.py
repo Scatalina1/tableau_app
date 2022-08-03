@@ -105,11 +105,8 @@ def next_projects(toplevel):
     connection = conn
     connection.sign_in()
     projects_df = get_projects_dataframe(connection)
-    projects_df = (projects_df[['name', 'id', 'topLevelProject','parentProjectId']])
-    toplevelproject = projects_df[projects_df['name']==toplevel]
+    projects_df = (projects_df['name'])
 
-    secondlevel_project_df = toplevelproject[toplevelproject['parentProjectId']]
-    secondlevel_projects = secondlevel_project_df['name']
     connection.sign_out()
     return secondlevel_projects
 
